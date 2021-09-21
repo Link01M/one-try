@@ -193,7 +193,7 @@ for i in range(count):
         caseshu[shu] = jicun
         shu += 1
         jicun = 0
-    if i == count - 1 and num != 0:  # 最后一个switch结构没有default，当读到最后一行的时候记录case数
+    if i == count - 1 and jicun != 0:  # 最后一个switch结构没有default，当读到最后一行的时候记录case数
         caseshu[shu] = jicun
         shu += 1
 nums = shu
@@ -447,7 +447,7 @@ if out == 4:
     print("switch num: ", end="")
     print(nums)  # 输出switch的个数
     print("case num: ", end="")
-    for i in range(shu-1):
+    for i in range(shu):
         print(caseshu[i],end=" ")  # 输出每个switch结构的case数
     print()  # 换行
     print("if-else num: ", end="")
